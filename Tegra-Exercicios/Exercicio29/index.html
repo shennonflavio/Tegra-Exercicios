@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERIFICAR CNPJ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .result {
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="cnpj">
+        <!-- validar cnpj -->
+        <div>
+            <h2 id="titulo"> Validar CNPJ</h2>
+        </div>
+        <div>
+            <p id="acoes"> Digite o CNPJ:<br></p>
+        </div>
+        <div><input id="CNPJ" placeholder="00.000.000/0000-00" maxlength="18"></div>
+        <div class="result">
+            <span>Saída:&nbsp;</span>
+            <span id="result"></span>
+        </div>
+        <div>
+            <button class="validar" type="button" onclick="validarCnpj();">Validar CNPJ</button>
+            <button onclick="reset()">Limpar</button>
+        </div>
+    </section>
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

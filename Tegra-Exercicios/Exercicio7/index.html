@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULAR CONSUMO</title>
+    <style>
+        * {
+            margin: 0;
+            left: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            width: 300px;
+            height: 150px;
+            padding: 12px 12px 48px;
+            border: 1px solid #292929;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border-radius: 4px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>CALCULAR CONSUMO</h1>
+        <br />
+        <div>
+            <label for="distancy">Distância percorrida:</label>
+            <input type="text" name="distancy" id="distancy" onchange="calcConsumption()">
+        </div>
+        <div>
+            <label for="consumption">Combustível gasto:</label>
+            <input type="text" name="consumption" id="consumption" onchange="calcConsumption()">
+        </div>
+        <div>
+            <label for="consumptionAverage">Consumo médio =</label>
+            <input type="text" name="consumptionAverage" id="consumptionAverage">
+        </div>
+        <button onclick="reset()">Limpar</button>
+
+
+    </section>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

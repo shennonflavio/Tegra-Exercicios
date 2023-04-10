@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULAR MEDIDAS</title>
+    <style>
+        * {
+            margin: 0;
+            left: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            width: 300px;
+            height: fit-content;
+            padding: 12px;
+            border: 1px solid #292929;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border-radius: 4px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>CALCULAR MEDIDAS</h1>
+        <br />
+        <div>
+            <label for="sizeA">Digite a medida A:</label>
+            <input type="text" name="sizeA" id="sizeA" onchange="calculateArea()">
+        </div>
+        <div>
+            <label for="sizeB">Digite a medida B:</label>
+            <input type="text" name="sizeB" id="sizeB" onchange="calculateArea()">
+        </div>
+        <div>
+            <label for="sizeC">Digite a medida C:</label>
+            <input type="text" name="sizeC" id="sizeC" onchange="calculateArea()">
+        </div>
+        <div>
+            <label for="areaSquare">ÁREA DO QUADRADO =</label>
+            <input type="text" name="areaSquare" id="areaSquare">
+        </div>
+        <div>
+            <label for="areaTriangle">ÁREA DO TRIÂNGULO =</label>
+            <input type="text" name="areaTriangle" id="areaTriangle">
+        </div>
+        <div>
+            <label for="areaTrapeze">ÁREA DO TRAPÉZIO =</label>
+            <input type="text" name="areaTrapeze" id="areaTrapeze">
+        </div>
+        <button onclick="reset()">Limpar</button>
+
+
+    </section>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

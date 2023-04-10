@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHECAR NÍVEL DE GLICOSE</title>
+
+    <style>
+        * {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        section {
+            width: 250px;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid black;
+            border-radius: 10px;
+            gap: 10px;
+            padding: 30px 10px;
+            margin: 20px 0;
+        }
+
+        input {
+            outline: none;
+            width: 170px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        span {
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+
+        .inputData {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .result {
+            width: 100%;
+            height: 15px;
+            text-align: center;
+            border-bottom: 1px solid black;
+            padding-bottom: 2px;
+        }
+
+        .ranking {
+            width: 180px;
+            height: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CHECAR NÍVEL DE GLICOSE</h2>
+    <section>
+        <div class="inputData">
+            <span>Digite a medida da glicose:</span>
+            <input type="number" id="glicValue" onchange="calcGlic()" placeholder="- - - mg/dl" />
+        </div>
+
+        <div class="ranking" id="ranking">
+            <span>Classificação:</span>
+            <div class="result" id="result"></div>
+        </div>
+        <button onclick="reset()">Limpar</button>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

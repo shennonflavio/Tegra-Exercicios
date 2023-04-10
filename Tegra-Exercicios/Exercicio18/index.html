@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONVERSOR DE TEMPERATURA</title>
+
+    <style>
+        * {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        section {
+            width: 450px;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid black;
+            border-radius: 10px;
+            gap: 10px;
+            padding: 30px 10px;
+            margin: 20px 0;
+        }
+
+        input {
+            outline: none;
+            width: 50px;
+            height: 15px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        span {
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+
+        .inputData {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .result {
+            width: 100%;
+            height: 15px;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            border-bottom: 1px solid black;
+            padding-bottom: 2px;
+        }
+
+        .temp {
+            width: 400px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            justify-content: center;
+            gap: 3px;
+            border: 1px solid #292929;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CONVERSOR DE TEMPERATURA</h2>
+    <section>
+        <div class="inputData">
+            <span>Você vai digitar a temperatura em qual escala (C/F)?</span>
+            <input type="text" id="temperature" onchange="getTemp()" />
+        </div>
+
+        <div class="temp" id="temp">
+
+        </div>
+
+        <button onclick="reset()">Limpar</button>
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

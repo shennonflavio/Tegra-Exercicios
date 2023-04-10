@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSUMO DO PLANO</title>
+    <style>
+        * {
+            margin: 0;
+            left: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            width: 350px;
+            height: fit-content;
+            padding: 12px;
+            border: 1px solid #292929;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border-radius: 4px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        input {
+            width: 180px;
+        }
+
+        button {
+            margin: 10px;
+            width: 100px;
+
+        }
+
+        span {
+            width: 180px;
+            height: 20px;
+            border-bottom: 1px solid black;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #noteResult {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>CONSUMO DO PLANO</h1>
+        <br />
+        <div>
+            <label for="numbers">Números recebidos:</label>
+            <input type="number" name="numbers" id="numbers" onchange="orderNumbers()">
+        </div>
+        <div>
+            <label for="planValue">Ordenados:</label>
+            <span id="orderedNumbers"></span>
+        </div>
+
+        <button onclick="reset()">Limpar</button>
+
+
+    </section>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

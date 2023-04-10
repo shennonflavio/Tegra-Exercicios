@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COEFICIENTES</title>
+    <style>
+        * {
+            margin: 0;
+            left: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            width: 350px;
+            height: fit-content;
+            padding: 12px;
+            border: 1px solid #292929;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border-radius: 4px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        input {
+            width: 100px;
+        }
+
+        button {
+            margin: 10px;
+            width: 100px;
+
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #noteResult {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>COEFICIENTES</h1>
+        <br />
+        <div>
+            <label for="coefficientA">Coeficiente a:</label>
+            <input type="number" name="coefficientA" id="coefficientA" onchange="coefficientCalc()">
+        </div>
+        <div>
+            <label for="coefficientB">Coeficiente b:</label>
+            <input type="number" name="coefficientB" id="coefficientB" onchange="coefficientCalc()">
+        </div>
+        <div>
+            <label for="coefficientC">Coeficiente c:</label>
+            <input type="number" name="coefficientC" id="coefficientC" onchange="coefficientCalc()">
+        </div>
+        <div>
+            <label for="sqrRootOne">X1 =</label>
+            <input type="number" name="sqrRootOne" id="sqrRootOne">
+        </div>
+        <div>
+            <label for="sqrRootTwo">X2 =</label>
+            <input type="number" name="sqrRootTwo" id="sqrRootTwo">
+        </div>
+        <div id="noRoot">
+
+        </div>
+        <button onclick="reset()">Limpar</button>
+
+
+    </section>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
